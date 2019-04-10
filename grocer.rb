@@ -43,4 +43,8 @@ def checkout(cart, coupons)
   finalCart.each do |product, detail|
     cartTotal += details[:price]* details[:count]
   end
+  if cartTotal > 100
+    cartTotal= (cartTotal * 0.9)
+  end
+  cartTotal
 end
