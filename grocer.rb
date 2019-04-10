@@ -40,9 +40,11 @@ def checkout(cart, coupons)
   coupcart=apply_coupons(consolCart, coupons)
   finalCart=apply_clearance(coupcart)
   cartTotal=0 
+  
   finalCart.each do |product, detail|
     cartTotal += details[:price]* details[:count]
   end
+  
   if cartTotal > 100
     cartTotal= (cartTotal * 0.9)
   end
