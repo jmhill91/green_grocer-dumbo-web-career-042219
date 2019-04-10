@@ -38,4 +38,7 @@ end
 def checkout(cart, coupons)
   consolCartconsolidate_cart(cart)
   coupcart=apply_coupons(consolCart)
+  finalCart=apply_clearance(coupcart)
+  cartTotal=0 
+  
 end
